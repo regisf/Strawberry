@@ -1,4 +1,16 @@
-yet-another-python-blog-engine
-==============================
+Flask Blog Engine
+=================
 
-A simple but extensible blog engine written with Flask and using MongoDB as database
+* This is an early prototype here for backup reasons.
+
+Requirement
+-----------
+
+Python 2.7
+Flask and its dependencies
+pymongo and MongoDB
+
+
+
+
+
