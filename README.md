@@ -1,14 +1,16 @@
 Flask Blog Engine
 =================
 
-* This is an early prototype here for backup reasons.
+FBE is an attempt to write a minimalistic blog engine but highly extensible in the Python language with Flash 
+and MongoDB
 
 Requirement
 -----------
-
-Python 2.7
+See requirement.txt
+Python 2.7 (not tested with Py3)
 Flask and its dependencies
-pymongo and MongoDB
+pymongo
+
 
 
 
