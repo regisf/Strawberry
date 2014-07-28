@@ -61,5 +61,7 @@ def do_error(error):
 # For standalone
 #
 if __name__ == '__main__':
-    app.debug = True
+    from fbelib.config import settings
+
+    app.debug = settings.Debug
     app.run()
