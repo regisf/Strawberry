@@ -25,6 +25,11 @@ __author__ = 'Regis FLORET'
 
 from flask import Flask
 
+# Connect to the database
+from fbelib.db.database import create_connection
+
+create_connection()
+
 # Import blueprints
 from fbelib.blueprints.pages import page_bp
 from fbelib.blueprints.category import category_bp
