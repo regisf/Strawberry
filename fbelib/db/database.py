@@ -23,13 +23,24 @@
 
 __author__ = 'Regis FLORET'
 
-from pymongo import MongoClient
+from mongoengine import connect
 
 from fbelib.config import settings
 
 
-Client = MongoClient(settings.ServerAddress, settings.ServerPort)
-Db = Client[settings.DatabaseName]
+def create_connection():
+    """
+    Create a connexion to the database
+    :return: None
+    """
+    connect(
+        settings.Database['name'],
+        host=settings.Database['host'],
+        port=settings.Database['port'],
+        username=settings.Database['username'],
+        password=settings.Database['password']
+    )
+
 
 
 
