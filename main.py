@@ -30,20 +30,11 @@ from strawberrylib.db.database import create_connection
 
 create_connection()
 
-# Import blueprints
-from strawberrylib.blueprints.pages import page_bp
-from strawberrylib.blueprints.category import category_bp
-from strawberrylib.blueprints.tags import tags_bp
-
 
 #
 # Create the application
 #
 app = Flask(__name__)
-app.register_blueprint(page_bp, url_prefix="/page")
-app.register_blueprint(category_bp, url_prefix="/category")
-app.register_blueprint(tags_bp, url_prefix="/tag")
-
 
 #
 # Route for normal path
