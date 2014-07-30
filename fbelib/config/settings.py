@@ -23,14 +23,15 @@
 
 __author__ = 'Regis FLORET'
 
-# Set the server address. Usually localhost
-ServerAddress = 'localhost'
-
-# Set the server port. This is default
-ServerPort = '21017'
-
-# Set the database name
-DatabaseName = None
+#
+# The database configuration
+Database = {
+    'name': None,
+    'host': None,
+    'port': None,
+    'username': None,
+    'password': None
+}
 
 # Set the template default path
 TemplateDefault = "templates/default"
