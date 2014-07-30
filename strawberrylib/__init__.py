@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Yet Another Python Blog Engine
+# Strawberry Blog Engine
 #
 # Copyright (c) 2014 Regis FLORET
 #
@@ -22,5 +22,4 @@
 # SOFTWARE.
 
 __author__ = 'Regis FLORET'
-
 

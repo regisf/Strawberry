@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Yet Another Python Blog Engine
+# Strawberry Blog Engine
 #
 # Copyright (c) 2014 Regis FLORET
 #
@@ -23,18 +23,27 @@
 
 __author__ = 'Regis FLORET'
 
-#
-# The database configuration
-Database = {
-    'name': None,
-    'host': None,
-    'port': None,
-    'username': None,
-    'password': None
-}
+from mongoengine import connect
 
-# Set the template default path
-TemplateDefault = "templates/default"
+from strawberrylib.config import settings
 
-# Debug only
-Debug = True
+
+def create_connection():
+    """
+    Create a connexion to the database
+    :return: None
+    """
+    connect(
+        settings.Database['name'],
+        host=settings.Database['host'],
+        port=settings.Database['port'],
+        username=settings.Database['username'],
+        password=settings.Database['password']
+    )
+
+
+
+
+
+
+

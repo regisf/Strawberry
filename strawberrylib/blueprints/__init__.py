@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Yet Another Python Blog Engine
+# Strawberry Blog Engine
 #
 # Copyright (c) 2014 Regis FLORET
 #
@@ -22,28 +22,3 @@
 # SOFTWARE.
 
 __author__ = 'Regis FLORET'
-
-from mongoengine import connect
-
-from fbelib.config import settings
-
-
-def create_connection():
-    """
-    Create a connexion to the database
-    :return: None
-    """
-    connect(
-        settings.Database['name'],
-        host=settings.Database['host'],
-        port=settings.Database['port'],
-        username=settings.Database['username'],
-        password=settings.Database['password']
-    )
-
-
-
-
-
-
-

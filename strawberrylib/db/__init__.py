@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Yet Another Python Blog Engine
+# Strawberry Blog Engine
 #
 # Copyright (c) 2014 Regis FLORET
 #
@@ -14,7 +14,7 @@
 # copies or substantial portions of the Software.
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANT ABILITY,
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
@@ -22,11 +22,3 @@
 # SOFTWARE.
 
 __author__ = 'Regis FLORET'
-
-from mongoengine import StringField, Document
-
-
-class Post(Document):
-    url = StringField()
-    title = StringField()
-    content = StringField()

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Yet Another Python Blog Engine
+# Strawberry Blog Engine
 #
 # Copyright (c) 2014 Regis FLORET
 #
@@ -22,3 +22,12 @@
 # SOFTWARE.
 
 __author__ = 'Regis FLORET'
+
+from flask import Blueprint
+
+page_bp = Blueprint('page', __name__, template_folder="templates")
+
+
+@page_bp.route('/<page_name>')
+def page(page_name):
+    return "You ask a page: " + page_name

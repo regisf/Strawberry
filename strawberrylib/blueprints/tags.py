@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Yet Another Python Blog Engine
+# Strawberry Blog Engine
 #
 # Copyright (c) 2014 Regis FLORET
 #
@@ -22,3 +22,18 @@
 # SOFTWARE.
 
 __author__ = 'Regis FLORET'
+
+from flask import Blueprint
+
+tags_bp = Blueprint('tags', __name__, template_folder="templates")
+
+
+@tags_bp.route('/')
+def tags():
+    return "Display all tags"
+
+
+@tags_bp.route("/<name>")
+def tag_name(name):
+    return "Display all post for: " + name
+

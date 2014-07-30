@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Yet Another Python Blog Engine
+# Strawberry Blog Engine
 #
 # Copyright (c) 2014 Regis FLORET
 #
@@ -26,14 +26,14 @@ __author__ = 'Regis FLORET'
 from flask import Flask
 
 # Connect to the database
-from fbelib.db.database import create_connection
+from strawberrylib.db.database import create_connection
 
 create_connection()
 
 # Import blueprints
-from fbelib.blueprints.pages import page_bp
-from fbelib.blueprints.category import category_bp
-from fbelib.blueprints.tags import tags_bp
+from strawberrylib.blueprints.pages import page_bp
+from strawberrylib.blueprints.category import category_bp
+from strawberrylib.blueprints.tags import tags_bp
 
 
 #
@@ -66,7 +66,7 @@ def do_error(error):
 # For standalone
 #
 if __name__ == '__main__':
-    from fbelib.config import settings
+    from strawberrylib.config import settings
 
     app.debug = settings.Debug
     app.run()

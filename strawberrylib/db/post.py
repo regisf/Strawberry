@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Yet Another Python Blog Engine
+# Strawberry Blog Engine
 #
 # Copyright (c) 2014 Regis FLORET
 #
@@ -14,7 +14,7 @@
 # copies or substantial portions of the Software.
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANT ABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
@@ -23,17 +23,10 @@
 
 __author__ = 'Regis FLORET'
 
-from flask import Blueprint
-
-tags_bp = Blueprint('tags', __name__, template_folder="templates")
+from mongoengine import StringField, Document
 
 
-@tags_bp.route('/')
-def tags():
-    return "Display all tags"
-
-
-@tags_bp.route("/<name>")
-def tag_name(name):
-    return "Display all post for: " + name
-
+class Post(Document):
+    url = StringField()
+    title = StringField()
+    content = StringField()

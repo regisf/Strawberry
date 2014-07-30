@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Yet Another Python Blog Engine
+# Strawberry Blog Engine
 #
 # Copyright (c) 2014 Regis FLORET
 #
@@ -23,20 +23,18 @@
 
 __author__ = 'Regis FLORET'
 
-from flask import Blueprint
+#
+# The database configuration
+Database = {
+    'name': None,
+    'host': None,
+    'port': None,
+    'username': None,
+    'password': None
+}
 
+# Set the template default path
+TemplateDefault = "templates/default"
 
-category_bp = Blueprint('category', __name__, template_folder="templates")
-
-@category_bp.route('/')
-def category():
-    """
-    Path for all categories
-    """
-    return "Display all categories"
-
-
-@category_bp.route('/<name>')
-def category_name(name):
-    return "Display category: " + name
-
+# Debug only
+Debug = True
